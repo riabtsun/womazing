@@ -1,0 +1,62 @@
+.teamSlider {
+  max-width: 730px;
+  position: relative;
+}
+
+.teamSliderImg {
+  max-width: 100%;
+}
+
+.teamArrows {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-swiper-button-prev {
+  position: absolute;
+  left: -66px;
+  top: 50%;
+  transition: 0.5s;
+}
+
+.team-swiper-button-next {
+  position: absolute;
+  right: -66px;
+  top: 50%;
+  transition: 0.5s;
+}
+
+.team-swiper-button-prev:hover,
+.team-swiper-button-next:hover {
+  cursor: pointer;
+}
+
+.team-swiper-button-prev svg path,
+.team-swiper-button-next svg path {
+  transition: 0.5s;
+}
+
+.team-swiper-button-prev:hover svg path,
+.team-swiper-button-next:hover svg path {
+  stroke: #000;
+}
+
+.teamSliderPagination.swiper-pagination-bullets {
+  position: absolute;
+  bottom: 60px;
+  z-index: 2;
+  text-align: center;
+}
+
+.teamSliderPagination .swiper-pagination-bullet {
+  width: 30px;
+  height: 4px;
+  display: inline-block;
+  margin: 0 6px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 0;
+}
+
+.teamSliderPagination .swiper-pagination-bullet-active {
+  background: #fff;
+}

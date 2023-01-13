@@ -6,12 +6,12 @@ import HomeSlider from './HomeSlider/HomeSlider';
 import Collection from './Collection/Collection';
 import Important from './Important/Important';
 import styles from './Home.module.sass';
+import Team from './Team/Team';
 
 const Home = () => {
   const { t } = useTranslation();
 
   const { count, user } = useContext(CustomContext);
-  // console.log(user);
   return (
     <div className={'container'}>
       <HomeSlider />
@@ -21,6 +21,7 @@ const Home = () => {
         Открыть магазин
       </Link>
       <Important />
+      <Team />
     </div>
   );
 };
