@@ -1,0 +1,147 @@
+{
+  "users": [
+    {
+      "email": "nedam@gmail.com",
+      "password": "$2a$10$77URlucN.onujYvawg0xcehcEAbEhRXzsn/X5nimy2yoHDOi.q9jO",
+      "login": "slimsy",
+      "phone": "06311111111",
+      "orders": [],
+      "id": 1
+    }
+  ],
+  "clothes": [
+    {
+      "id": 1,
+      "title": "coat"
+    },
+    {
+      "id": 1,
+      "title": "excavator",
+      "price": "$921.28",
+      "image": "",
+      "size": "xl",
+      "colors": [
+        "pink",
+        "red",
+        "green",
+        "white"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "backhoe",
+      "price": "$203.16",
+      "image": "",
+      "size": "2xl",
+      "colors": [
+        "purple",
+        "red",
+        "green",
+        "white"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "dump truck",
+      "price": "$214.66",
+      "image": "",
+      "size": "xs",
+      "colors": [
+        "indigo",
+        "red",
+        "green",
+        "white"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "crawler",
+      "price": "$51.11",
+      "image": "",
+      "size": "l",
+      "colors": [
+        "aquamarine",
+        "red",
+        "green",
+        "white"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "excavator",
+      "price": "$970.11",
+      "image": "",
+      "size": "2xl",
+      "colors": [
+        "maroon",
+        "red",
+        "green",
+        "white"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "compactor",
+      "price": "$808.36",
+      "image": "",
+      "size": "xl",
+      "colors": [
+        "turquoise",
+        "red",
+        "green",
+        "white"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "skid-steer",
+      "price": "$900.42",
+      "image": "",
+      "size": "xl",
+      "colors": [
+        "yellow",
+        "red",
+        "green",
+        "white"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "crawler",
+      "price": "$947.13",
+      "image": "",
+      "size": "xl",
+      "colors": [
+        "maroon",
+        "red",
+        "green",
+        "white"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "crawler",
+      "price": "$740.74",
+      "image": "",
+      "size": "3xl",
+      "colors": [
+        "turquoise",
+        "red",
+        "green",
+        "white"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "dragline",
+      "price": "$388.72",
+      "image": "",
+      "size": "m",
+      "colors": [
+        "red",
+        "green",
+        "white"
+      ]
+    }
+  ]
+}

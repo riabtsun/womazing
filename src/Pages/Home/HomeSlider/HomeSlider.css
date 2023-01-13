@@ -1,0 +1,17 @@
+.homeSliderPagination {
+  display: flex;
+  justify-content: center;
+}
+
+.homeSliderPagination .swiper-pagination-bullet {
+  width: 30px;
+  height: 4px;
+  background-color: #d1d1d1;
+  margin: 0 12px;
+  display: block;
+  border-radius: 0;
+}
+
+.homeSliderPagination .swiper-pagination-bullet-active {
+  background-color: #000;
+}
