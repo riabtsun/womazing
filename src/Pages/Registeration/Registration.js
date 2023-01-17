@@ -1,9 +1,7 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { CustomContext } from '../../Context';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
-import login from '../Login/Login';
 import styles from './Registration.module.sass';
 
 const Registration = () => {
@@ -12,8 +10,8 @@ const Registration = () => {
   const {
     register,
     handleSubmit,
-    setError: { errors },
-    reset,
+    // setError: { errors },
+    // reset,
   } = useForm();
 
   return (
@@ -28,7 +26,6 @@ const Registration = () => {
           type="email"
           placeholder={'enter email'}
         />
-        {/*<span>{errors?.email}</span>*/}
         <br /> <br />
         <input {...register('login')} type="text" placeholder={'enter login'} />
         <br /> <br />
