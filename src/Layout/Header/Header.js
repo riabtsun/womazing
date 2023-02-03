@@ -55,14 +55,17 @@ const Header = () => {
           </a>
           <div className={styles.userStatus}>
             {user && user.login.length ? (
-              <Link
-                className={styles.userStatusInfo}
-                to="/"
-                onClick={() => logOutUser()}
-              >
-                <UserIcon />
-                {user.login} Вийти
-              </Link>
+              <div>
+                <Link to={'/profile'}>{user.login} </Link>
+                <Link
+                  className={styles.userStatusInfo}
+                  to="/"
+                  onClick={() => logOutUser()}
+                >
+                  <UserIcon />
+                  Вийти
+                </Link>
+              </div>
             ) : (
               <Link to="/login">Увійти</Link>
             )}{' '}

@@ -7,6 +7,22 @@
       "phone": "06311111111",
       "orders": [],
       "id": 1
+    },
+    {
+      "email": "nedam@mailu.com",
+      "password": "$2a$10$2SIHN.78vImnxeIGWOW8buocMfBOsc71RwlPXfMzf6nrbUm0IWpS.",
+      "login": "line6spider",
+      "phone": "06311111111",
+      "orders": [],
+      "id": 2
+    },
+    {
+      "email": "nedam@mailua.com",
+      "password": "$2a$10$s6o3dsuRnmJSszohFzeOW.2AjyxzDYfWwgSoTT1RLX8IbPzd39DDy",
+      "login": "John Doe",
+      "phone": "",
+      "orders": [],
+      "id": 3
     }
   ],
   "clothes": [
