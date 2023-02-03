@@ -2,14 +2,15 @@ import { Link } from 'react-router-dom';
 import girl1 from './girl1.jpg';
 import girl2 from './girl2.jpg';
 import styles from './AboutBrand.module.sass';
+import BreadCrumb from '../../components/BreadCrumb/BreadCrumb';
+import PageTitle from '../../components/PageTitle/PageTitle';
 
 const AboutBrand = () => {
   return (
     <section>
       <div className="container">
-        <h2 className={styles.pageTitle}>О бренде</h2>
-        <span className={styles}>Главная - </span>
-        <span className={styles}>О бренде</span>
+        <PageTitle title={'О бренде'} />
+        <BreadCrumb source={'/about'} selfName={'О бренде'} />
         <div className={styles.mainContent}>
           <div className={styles.contentBlock}>
             <img src={girl1} alt="girl" className={styles.contentImage} />

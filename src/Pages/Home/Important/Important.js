@@ -1,7 +1,6 @@
 import styles from './Important.module.sass';
-import ImportantCard from './ImportantCard';
+import Card from './Card/Card';
 import QualityIcon from '../../../components/UI/Icons/QualityIcon';
-import UserIcon from '../../../components/UI/Icons/UserIcon';
 import SpeedIcon from '../../../components/UI/Icons/SpeedIcon';
 import HandIcon from '../../../components/UI/Icons/HandIcon';
 const Important = () => {
@@ -9,21 +8,21 @@ const Important = () => {
     <section className={styles.section}>
       <h2 className={styles.sectionTitle}>Что для нас важно</h2>
       <div className={styles.importantCards}>
-        <ImportantCard
+        <Card
           icon={<QualityIcon />}
           title={'Качество'}
           description={
             'Наши профессионалы работают на лучшем оборудовании для пошива одежды беспрецедентного качества'
           }
         />
-        <ImportantCard
+        <Card
           icon={<SpeedIcon />}
           title={'Скорость'}
           description={
             'Благодаря отлаженной системе в Womazing мы можем отшивать до 20-ти единиц продукции в наших собственных цехах'
           }
         />
-        <ImportantCard
+        <Card
           icon={<HandIcon />}
           title={'Ответственность'}
           description={

@@ -1,12 +1,14 @@
 import styles from './Contacts.module.sass';
+import { Link, NavLink } from 'react-router-dom';
+import BreadCrumb from '../../components/BreadCrumb/BreadCrumb';
+import PageTitle from '../../components/PageTitle/PageTitle';
 
 const Contacts = () => {
   return (
     <section>
       <div className="container">
-        <h2 className={styles.pageTitle}>О бренде</h2>
-        <span className={styles}>Главная - </span>
-        <span className={styles}>О бренде</span>
+        <PageTitle title={'Контакты'} />
+        <BreadCrumb source={'/contacts'} selfName={'Контакты'} />
         <div className={styles.mainContent}>
           <div className={styles.googleMap}>
             <iframe

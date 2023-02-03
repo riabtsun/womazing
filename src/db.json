@@ -23,6 +23,14 @@
       "phone": "",
       "orders": [],
       "id": 3
+    },
+    {
+      "email": "umka@gmail.com",
+      "password": "$2a$10$No9Y9J5h5SDZkwu4jo.zd.bVuTs1iJpvzTEcAJ/zxia.xWEtPyDhu",
+      "login": "umka cat",
+      "phone": "06311111111",
+      "orders": [],
+      "id": 4
     }
   ],
   "clothes": [

@@ -1,5 +1,5 @@
-import styles from './Important.module.sass';
-const ImportantCard = ({ icon, title, description }) => {
+import styles from '../Important.module.sass';
+const Card = ({ icon, title, description }) => {
   return (
     <div className={styles.importantCard}>
       {icon}
@@ -9,4 +9,4 @@ const ImportantCard = ({ icon, title, description }) => {
   );
 };
 
-export default ImportantCard;
+export default Card;
