@@ -1,5 +1,5 @@
 import styles from './ProductCard.module.sass';
-import Arrow from '../UI/Icons/Arrow';
+import Arrow from '../../Assets/Icons/Arrow';
 
 const ProductCard = ({ image, name, price, oldPrice }) => {
   return (

@@ -1,5 +1,4 @@
 import styles from './Contacts.module.sass';
-import { Link, NavLink } from 'react-router-dom';
 import BreadCrumb from '../../components/BreadCrumb/BreadCrumb';
 import PageTitle from '../../components/PageTitle/PageTitle';
 
@@ -12,6 +11,7 @@ const Contacts = () => {
         <div className={styles.mainContent}>
           <div className={styles.googleMap}>
             <iframe
+              title={'map'}
               src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d20309.075323923767!2d30.4721233!3d50.4851493!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1674387462172!5m2!1sru!2sua"
               allowFullScreen=""
               loading="lazy"
@@ -29,7 +29,7 @@ const Contacts = () => {
               </li>
               <li className={styles.contactsListItem}>
                 <span>Адрес</span>
-                <a href="#">г. Москва, 3-я улица Строителей, 25</a>
+                <a href="map.google.com">г. Москва, 3-я улица Строителей, 25</a>
               </li>
             </ul>
 

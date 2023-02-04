@@ -2,18 +2,17 @@ import { Link, NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { CustomContext } from '../../Context';
 import { useTranslation } from 'react-i18next';
-import Logo from '../../components/UI/Icons/Logo';
-import Phone from '../../components/UI/Icons/Phone';
-import ShoppingBasket from '../../components/UI/Icons/ShoppingBasket';
+import Logo from '../../Assets/Icons/Logo';
+import Phone from '../../Assets/Icons/Phone';
+import ShoppingBasket from '../../Assets/Icons/ShoppingBasket';
 import styles from './Header.module.sass';
-import UserIcon from '../../components/UI/Icons/UserIcon';
+import UserIcon from '../../Assets/Icons/UserIcon';
 
 const Header = () => {
   const { t, i18n } = useTranslation();
   const { user, logOutUser } = useContext(CustomContext);
-  console.log(i18n.languages);
 
-  const changesLanguage = lang => {
+  const changeLanguage = lang => {
     return i18n.changeLanguage(lang);
   };
 
@@ -25,22 +24,22 @@ const Header = () => {
           <ul className={styles.header__menu}>
             <li className={styles.header__menuItem}>
               <NavLink to="/" className={styles.header__link}>
-                Главная
+                {t('header.link1')}
               </NavLink>
             </li>
             <li className={styles.header__menuItem}>
               <NavLink to="/shop" className={styles.header__link}>
-                Магазин
+                {t('header.link2')}
               </NavLink>
             </li>
             <li className={styles.header__menuItem}>
               <NavLink to="/about" className={styles.header__link}>
-                О бренде
+                {t('header.link3')}
               </NavLink>
             </li>
             <li className={styles.header__menuItem}>
               <NavLink to="/contacts" className={styles.header__link}>
-                Контакты
+                {t('header.link4')}
               </NavLink>
             </li>
           </ul>
@@ -50,9 +49,9 @@ const Header = () => {
               +7 (495) 823-54-12
             </a>
           </div>
-          <a href="#">
+          <Link to={'/basket'}>
             <ShoppingBasket />
-          </a>
+          </Link>
           <div className={styles.userStatus}>
             {user && user.login.length ? (
               <div>
@@ -63,34 +62,25 @@ const Header = () => {
                   onClick={() => logOutUser()}
                 >
                   <UserIcon />
-                  Вийти
+                  {t('header.exit')}
                 </Link>
               </div>
             ) : (
-              <Link to="/login">Увійти</Link>
+              <Link to="/login">{t('header.enter')}</Link>
             )}{' '}
           </div>
           <div>
-            {i18n.languages.map((lang, i) => {
-              return (
-                <button
-                  key={i}
-                  className={
-                    lang === i18n.language
-                      ? styles.languageBtnActive
-                      : styles.languageBtn
-                  }
-                  onClick={() => changesLanguage(lang)}
-                >
-                  {lang}
-                </button>
-              );
-            })}
             <button
               className={styles.languageBtn}
-              onClick={() => changesLanguage('en')}
+              onClick={() => changeLanguage('en')}
             >
               EN
+            </button>
+            <button
+              className={styles.languageBtn}
+              onClick={() => changeLanguage('uk')}
+            >
+              Ua
             </button>
           </div>
         </div>

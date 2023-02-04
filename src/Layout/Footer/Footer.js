@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import styles from './Footer.module.sass';
-import Logo from '../../components/UI/Icons/Logo';
-import Instagram from '../../components/UI/Icons/Instagram';
-import Facebook from '../../components/UI/Icons/Facebook';
-import Twitter from '../../components/UI/Icons/Twitter';
-import VisaImg from '../../components/UI/Icons/visa-mastercard.png';
+import Logo from '../../Assets/Icons/Logo';
+import Instagram from '../../Assets/Icons/Instagram';
+import Facebook from '../../Assets/Icons/Facebook';
+import Twitter from '../../Assets/Icons/Twitter';
+import VisaImg from '../../Assets/Icons/visa-mastercard.png';
 
 const Footer = () => {
   return (

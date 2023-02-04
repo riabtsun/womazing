@@ -1,10 +1,10 @@
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import barbers from './barbers.jpg';
+import barbers from '../../../Assets/Images/Home/Team/barbers.jpg';
 import './TeamSlider.css';
 import styles from './Team.module.sass';
 import 'swiper/css/scrollbar';
-import Arrow from '../../../components/UI/Icons/Arrow';
+import Arrow from '../../../Assets/Icons/Arrow';
 import { Link } from 'react-router-dom';
 
 const Team = () => {

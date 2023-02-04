@@ -7,10 +7,8 @@ import 'swiper/swiper.min.css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import Arrow from '../../../components/UI/Icons/Arrow';
-import slideImg1 from '../../../Assets/images/Slider1.jpg';
-import slideImg2 from '../../../Assets/images/slider2.jpg';
-import slideImg3 from '../../../Assets/images/slider3.jpg';
+import Arrow from '../../../Assets/Icons/Arrow';
+import slideImg1 from '../../../Assets/Images/Slider1.jpg';
 import { useTranslation } from 'react-i18next';
 
 const HomeSlider = () => {
@@ -31,13 +29,14 @@ const HomeSlider = () => {
       >
         <SwiperSlide className={styles.slide}>
           <div>
-            <h1 className={styles.sliderTitle}>
-              {t('home.firstScreen.title')}
-            </h1>
-            <p className={styles.sliderDescription}>
-              Утонченные сочетания и бархатные оттенки - вот то, что вы искали в
-              этом сезоне. Время исследовать.
-            </p>
+            <h1
+              className={styles.sliderTitle}
+              dangerouslySetInnerHTML={{ __html: t('home.new.title') }}
+            />
+            <p
+              className={styles.sliderDescription}
+              dangerouslySetInnerHTML={{ __html: t('home.new.text') }}
+            />
 
             <div className={styles.toShopWrap}>
               <Arrow
@@ -46,15 +45,15 @@ const HomeSlider = () => {
                   transform: 'rotate(90deg)',
                 }}
               />
-              <Link to={'/shop'} className={styles.openShopBtn}>
-                Открыть магазин
-              </Link>
+              <Link
+                to={'/shop'}
+                className={styles.openShopBtn}
+                dangerouslySetInnerHTML={{ __html: t('home.new.btn') }}
+              />
             </div>
           </div>
           <div className={styles.images}>
             <img src={slideImg1} alt="girl" />
-            {/*<img src={slideImg2} alt="girl" className={styles.secondImage} />*/}
-            {/*<img src={slideImg3} alt="girl" className={styles.thirdImage} />*/}
           </div>
         </SwiperSlide>
         <div className={'homeSliderPagination'}></div>

@@ -7,6 +7,7 @@ import Collection from './Collection/Collection';
 import Important from './Important/Important';
 import styles from './Home.module.sass';
 import Team from './Team/Team';
+import logo from '../../Assets/Icons/Logo';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -16,9 +17,9 @@ const Home = () => {
     <div className={'container'}>
       <HomeSlider />
       <Collection />
-      {/*<h1>{t('home.firstScreen.title')}</h1>*/}
+      <h1>{t('home.new.title')}</h1>
       <Link className={styles.openShopBtn} to="/shop">
-        Открыть магазин
+        {t('home.new.btn')}
       </Link>
       <Important />
       <Team />

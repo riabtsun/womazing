@@ -1,8 +1,9 @@
 import styles from './Important.module.sass';
 import Card from './Card/Card';
-import QualityIcon from '../../../components/UI/Icons/QualityIcon';
-import SpeedIcon from '../../../components/UI/Icons/SpeedIcon';
-import HandIcon from '../../../components/UI/Icons/HandIcon';
+import QualityIcon from '../../../Assets/Icons/QualityIcon';
+import SpeedIcon from '../../../Assets/Icons/SpeedIcon';
+import HandIcon from '../../../Assets/Icons/HandIcon';
+
 const Important = () => {
   return (
     <section className={styles.section}>
