@@ -31,18 +31,22 @@
       "phone": "06311111111",
       "orders": [],
       "id": 4
+    },
+    {
+      "email": "umkacat@gmail.com",
+      "password": "$2a$10$TcEOBy7.oIP7fxw5xhl92unLm.aSoEtq9qmtA8pXjdAdmnPp15q3m",
+      "login": "Umka cat",
+      "phone": "06311111111",
+      "orders": [],
+      "id": 5
     }
   ],
   "clothes": [
     {
       "id": 1,
-      "title": "coat"
-    },
-    {
-      "id": 1,
       "title": "excavator",
       "price": "$921.28",
-      "image": "",
+      "image": "../Shop/usa.jpg",
       "size": "xl",
       "colors": [
         "pink",
@@ -55,7 +59,7 @@
       "id": 2,
       "title": "backhoe",
       "price": "$203.16",
-      "image": "",
+      "image": "../Shop/sweet.jpg",
       "size": "2xl",
       "colors": [
         "purple",
@@ -68,7 +72,7 @@
       "id": 3,
       "title": "dump truck",
       "price": "$214.66",
-      "image": "",
+      "image": "../Shop/Glow.jpg",
       "size": "xs",
       "colors": [
         "indigo",
@@ -81,7 +85,7 @@
       "id": 4,
       "title": "crawler",
       "price": "$51.11",
-      "image": "",
+      "image": "../Shop/usa.jpg",
       "size": "l",
       "colors": [
         "aquamarine",
@@ -94,7 +98,7 @@
       "id": 5,
       "title": "excavator",
       "price": "$970.11",
-      "image": "",
+      "image": "../Shop/sweet.jpg",
       "size": "2xl",
       "colors": [
         "maroon",
@@ -107,7 +111,7 @@
       "id": 6,
       "title": "compactor",
       "price": "$808.36",
-      "image": "",
+      "image": "../Shop/Glow.jpg",
       "size": "xl",
       "colors": [
         "turquoise",
@@ -120,7 +124,7 @@
       "id": 7,
       "title": "skid-steer",
       "price": "$900.42",
-      "image": "",
+      "image": "../Shop/usa.jpg",
       "size": "xl",
       "colors": [
         "yellow",
@@ -133,7 +137,7 @@
       "id": 8,
       "title": "crawler",
       "price": "$947.13",
-      "image": "",
+      "image": "../Shop/sweet.jpg",
       "size": "xl",
       "colors": [
         "maroon",
@@ -146,7 +150,7 @@
       "id": 9,
       "title": "crawler",
       "price": "$740.74",
-      "image": "",
+      "image": "../Shop/Glow.jpg",
       "size": "3xl",
       "colors": [
         "turquoise",
@@ -159,7 +163,7 @@
       "id": 10,
       "title": "dragline",
       "price": "$388.72",
-      "image": "",
+      "image": "../Shop/usa.jpg",
       "size": "m",
       "colors": [
         "red",

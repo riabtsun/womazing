@@ -9,7 +9,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'ua',
-    whiteList: ['ua', 'en'],
+    whiteList: ['ua', 'en', 'uk'],
     debug: false,
     detection: {
       order: ['localStorage', 'cookie'],

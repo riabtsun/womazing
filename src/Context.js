@@ -5,14 +5,22 @@ import { useNavigate } from 'react-router-dom';
 export const CustomContext = createContext();
 
 export const Context = props => {
-  const [count, setCount] = useState(1);
   const [user, setUser] = useState({
     login: '',
   });
+
+  const [collection, setCollection] = useState([]);
+
   const navigate = useNavigate();
 
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem('user')));
+    if (localStorage.getItem('user') !== null) {
+      setUser(JSON.parse(localStorage.getItem('user')));
+    }
+
+    axios('http://localhost:8080/clothes').then(({ data }) =>
+      setCollection(data)
+    );
   }, []);
 
   const registerUser = data => {
@@ -43,13 +51,12 @@ export const Context = props => {
   };
 
   const value = {
-    count,
-    setCount,
     user,
     setUser,
     registerUser,
     logOutUser,
     loginUser,
+    collection,
   };
 
   return (

@@ -1,5 +1,5 @@
 import styles from './Important.module.sass';
-import Card from './Card/Card';
+import Card from '../../../components/Card/Card';
 import QualityIcon from '../../../Assets/Icons/QualityIcon';
 import SpeedIcon from '../../../Assets/Icons/SpeedIcon';
 import HandIcon from '../../../Assets/Icons/HandIcon';

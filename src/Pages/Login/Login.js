@@ -9,31 +9,33 @@ const Login = () => {
 
   return (
     <section className={styles.login}>
-      <form onSubmit={handleSubmit(loginUser)}>
-        <h2>Вхід до аккаунту</h2>
-        <br />
-        <br />
-        <input
-          {...register('email')}
-          type="email"
-          placeholder={'enter email'}
-        />
-        <br />
-        <br />
-        <input
-          {...register('password')}
-          type="password"
-          placeholder={'enter password'}
-        />
-        <br />
-        <br />
-        <button type={'submit'}>Увійти</button>
-        <br />
-        <br />
-        <p>
-          Аккаунт відсутній, <Link to={'/registration'}>зареєструватися</Link>
-        </p>
-      </form>
+      <div className="container">
+        <form onSubmit={handleSubmit(loginUser)}>
+          <h2>Вхід до аккаунту</h2>
+          <br />
+          <br />
+          <input
+            {...register('email')}
+            type="email"
+            placeholder={'enter email'}
+          />
+          <br />
+          <br />
+          <input
+            {...register('password')}
+            type="password"
+            placeholder={'enter password'}
+          />
+          <br />
+          <br />
+          <button type={'submit'}>Увійти</button>
+          <br />
+          <br />
+          <p>
+            Аккаунт відсутній, <Link to={'/registration'}>зареєструватися</Link>
+          </p>
+        </form>
+      </div>
     </section>
   );
 };

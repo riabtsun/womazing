@@ -1,4 +1,4 @@
-import styles from '../Important.module.sass';
+import styles from '../../Pages/Home/Important/Important.module.sass';
 const Card = ({ icon, title, description }) => {
   return (
     <div className={styles.importantCard}>
