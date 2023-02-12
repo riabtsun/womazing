@@ -5,14 +5,14 @@ const ProductCard = ({ image, name, price, oldPrice }) => {
   return (
     <div className={styles.productCard}>
       <div className={styles.imageWrap}>
-        <img className={''} src={image} alt="clothes" />
+        <img className={styles.productCardImage} src={image} alt="clothes" />
       </div>
       <div className={styles.arrow}>
-        <Arrow className={'arrow'} color={'#fff'} styles={{}} />
+        <Arrow className={'arrow'} color={'#fff'} />
       </div>
       <h4 className={styles.cardName}>{name}</h4>
+      <span className={styles.oldPrice}>{oldPrice && '$' + oldPrice}</span>
       <span>${price}</span>
-      <span>${oldPrice}</span>
     </div>
   );
 };
