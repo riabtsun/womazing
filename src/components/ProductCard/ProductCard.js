@@ -11,8 +11,8 @@ const ProductCard = ({ image, name, price, oldPrice }) => {
         <Arrow className={'arrow'} color={'#fff'} />
       </div>
       <h4 className={styles.cardName}>{name}</h4>
-      <span className={styles.oldPrice}>{oldPrice && '$' + oldPrice}</span>
-      <span>${price}</span>
+      <span className={oldPrice && styles.oldPrice}>${price}</span>
+      <span>{oldPrice && '$' + oldPrice}</span>
     </div>
   );
 };

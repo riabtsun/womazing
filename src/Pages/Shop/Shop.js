@@ -10,16 +10,16 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 const Shop = () => {
   const { t } = useTranslation();
   const [status, setStatus] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [sort, setSort] = useState('');
+  const [active, setActive] = useState('');
 
   const { collection } = useContext(CustomContext);
-
-  const [currentPage, setCurrentPage] = useState(1);
 
   return (
     <section>
       <div className="container">
         <PageTitle title={'Магазин'} />
-        <h2 className={styles.title}>Магазин</h2>
         <BreadCrumb source={'/shop'} selfName={'shop'} />
         <ul className={styles.shopList}>
           <li
@@ -83,7 +83,28 @@ const Shop = () => {
             {t('shop.t-shirt')}
           </li>
         </ul>
-        <p>
+        <div className={styles.sorting}>
+          Сортувати
+          <button
+            className={`${styles.sortingBtn} ${sort === 'grow' ? active : ''}`}
+            onClick={function (event) {
+              setSort('grow');
+              sort === 'grow' && setActive(`${styles.sortingBtnActive}`);
+            }}
+          >
+            За зменшенням ціни
+          </button>
+          <button
+            className={`${styles.sortingBtn} ${sort === 'less' ? active : ''}`}
+            onClick={() => {
+              setSort('less');
+              sort === 'less' && setActive(`${styles.sortingBtnActive}`);
+            }}
+          >
+            За зростанням ціни
+          </button>
+        </div>
+        <p className={styles.productsValues}>
           Показано:
           {
             collection
@@ -105,6 +126,13 @@ const Shop = () => {
 
         <div className={styles.shopRow}>
           {collection
+            .sort((a, b) => {
+              if (sort === 'grow') {
+                return (b.priceSale || b.price) - (a.priceSale || a.price);
+              } else if (sort === 'less') {
+                return (a.priceSale || a.price) - (b.priceSale || b.price);
+              }
+            })
             .filter(item => {
               return status === 'all' ? item : item.category === status;
             })
@@ -118,7 +146,7 @@ const Shop = () => {
                 // name={t('home.collection.text1')}
                 name={item.title}
                 price={item.price}
-                oldPrice={item.oldPrice && item.oldPrice}
+                oldPrice={item.priceSale}
               />
             ))}
         </div>
