@@ -1,0 +1,79 @@
+.sliderTitle {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+  color: #000;
+  max-width: 590px;
+  text-align: left;
+  margin-top: 180px;
+}
+
+.sliderDescription {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  text-align: right;
+  letter-spacing: 0.02em;
+  color: #000;
+  margin-top: 45px;
+  max-width: 385px;
+}
+
+.slide {
+  display: flex !important;
+  justify-content: space-between;
+  overflow: visible;
+  flex-wrap: nowrap;
+}
+
+.sliderLeftText {
+  width: fit-content;
+}
+
+.images {
+  max-width: 100%;
+}
+
+.secondImage {
+  position: absolute;
+  top: 123px;
+  right: -60px;
+}
+
+.thirdImage {
+  position: absolute;
+  bottom: -63px;
+  right: 310px;
+}
+
+.container {
+  overflow: visible;
+}
+
+.openShopBtn {
+  background: #6e9c9f;
+  padding: 22px 50px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 138.9%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin-left: 24px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.toShopWrap {
+  margin-top: 45px;
+  background-color: rgba(110, 156, 159, 0.1);
+  padding-left: 26px;
+  width: fit-content;
+}
+.toShopWrap:hover .openShopBtn {
+  background: #fff;
+  color: #6e9c9f;
+}
+
+/*# sourceMappingURL=HomeSlider.module.css.map */

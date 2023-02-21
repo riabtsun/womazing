@@ -19,15 +19,16 @@
   max-width: 385px
 
 .slide
-  display: flex
+  display: flex !important
   justify-content: space-between
   overflow: visible
+  flex-wrap: nowrap
+
+.sliderLeftText
+  width: fit-content
 
 .images
-  position: relative
-  z-index: 5
-  overflow: visible
-  background: #f1eadc
+  max-width: 100%
 
 .secondImage
   position: absolute

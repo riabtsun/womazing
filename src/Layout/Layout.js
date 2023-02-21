@@ -10,6 +10,7 @@ import Footer from './Footer/Footer';
 import Registration from '../Pages/Registeration/Registration';
 import Login from '../Pages/Login/Login';
 import Profile from '../Pages/Profile/Profile';
+import Product from '../Pages/Product/Product';
 
 const Layout = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const Layout = () => {
         <Route element={<Contacts />} path={'/contacts'} />
         <Route element={<Cart />} path={'/cart'} />
         <Route element={<Profile />} path={'/profile'} />
+        <Route element={<Product />} path={'/product/:id'} />
         <Route element={<Registration />} path={'/registration'} />
         <Route element={<Login />} path={'/login'} />
         <Route element={<NotFound />} path={'*'} />

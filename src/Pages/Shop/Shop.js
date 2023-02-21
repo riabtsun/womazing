@@ -9,18 +9,19 @@ import ProductCard from '../../components/ProductCard/ProductCard';
 
 const Shop = () => {
   const { t } = useTranslation();
-  const [status, setStatus] = useState('all');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [sort, setSort] = useState('');
+  // const [status, setStatus] = useState('all');
+  // const [page, setPage] = useState(1);
+  const [sort, setSort] = useState(' ');
   const [active, setActive] = useState('');
 
-  const { collection } = useContext(CustomContext);
+  const { collection, status, setStatus, page, setPage } =
+    useContext(CustomContext);
 
   return (
     <section>
       <div className="container">
         <PageTitle title={'Магазин'} />
-        <BreadCrumb source={'/shop'} selfName={'shop'} />
+        {/*<BreadCrumb source={'/shop'} selfName={'shop'} />*/}
         <ul className={styles.shopList}>
           <li
             className={
@@ -29,7 +30,7 @@ const Shop = () => {
             }
             onClick={() => {
               setStatus('all');
-              setCurrentPage(1);
+              setPage(1);
             }}
           >
             {t('shop.all')}
@@ -37,11 +38,11 @@ const Shop = () => {
           <li
             className={
               styles.shopListItem +
-              ` ${status === 'coat' && styles.shopListItem_active}`
+              ` ${status === 'suit' && styles.shopListItem_active}`
             }
             onClick={() => {
-              setStatus('coat');
-              setCurrentPage(1);
+              setStatus('suit');
+              setPage(1);
             }}
           >
             {t('shop.suit')}
@@ -53,7 +54,7 @@ const Shop = () => {
             }
             onClick={() => {
               setStatus('sweatshirt');
-              setCurrentPage(1);
+              setPage(1);
             }}
           >
             {t('shop.sweatshirt')}
@@ -61,11 +62,11 @@ const Shop = () => {
           <li
             className={
               styles.shopListItem +
-              ` ${status === 'cardigan' && styles.shopListItem_active}`
+              ` ${status === 'hoodie' && styles.shopListItem_active}`
             }
             onClick={() => {
-              setStatus('cardigan');
-              setCurrentPage(1);
+              setStatus('hoodie');
+              setPage(1);
             }}
           >
             {t('shop.hoodie')}
@@ -77,7 +78,7 @@ const Shop = () => {
             }
             onClick={() => {
               setStatus('t-shirt');
-              setCurrentPage(1);
+              setPage(1);
             }}
           >
             {t('shop.t-shirt')}
@@ -112,7 +113,7 @@ const Shop = () => {
                 return status === 'all' ? item : item.category === status;
               })
               .filter((item, i) => {
-                return i + 1 <= currentPage * 9 && i >= currentPage * 9 - 9;
+                return i + 1 <= page * 9 && i >= page * 9 - 9;
               }).length
           }
           из
@@ -137,10 +138,11 @@ const Shop = () => {
               return status === 'all' ? item : item.category === status;
             })
             .filter((item, i) => {
-              return i + 1 <= currentPage * 9 && i >= currentPage * 9 - 9;
+              return i + 1 <= page * 9 && i >= page * 9 - 9;
             })
             .map(item => (
               <ProductCard
+                cardPath={`/product/${item.id}`}
                 key={item.id}
                 image={`../${Object.values(item.image)[0]}`}
                 // name={t('home.collection.text1')}
@@ -156,8 +158,8 @@ const Shop = () => {
             status === 'all' ? item : item.category === status
           ).length > 9 ? (
             <Pagination
-              current={currentPage}
-              onChange={setCurrentPage}
+              current={page}
+              onChange={setPage}
               total={
                 collection.filter(item =>
                   status === 'all' ? item : item.category === status

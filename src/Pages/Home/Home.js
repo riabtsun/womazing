@@ -7,12 +7,11 @@ import Collection from './Collection/Collection';
 import Important from './Important/Important';
 import styles from './Home.module.sass';
 import Team from './Team/Team';
-import logo from '../../Assets/Icons/Logo';
 
 const Home = () => {
   const { t } = useTranslation();
 
-  const { count, user } = useContext(CustomContext);
+  // const { count, user } = useContext(CustomContext);
   return (
     <div className={'container'}>
       <HomeSlider />

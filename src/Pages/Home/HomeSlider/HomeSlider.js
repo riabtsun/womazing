@@ -24,11 +24,38 @@ const HomeSlider = () => {
         loop={true}
         autoplay={false}
         pagination={{ el: '.homeSliderPagination', clickable: true }}
-        // onSwiper={swiper => console.log(swiper)}
-        // onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide className={styles.slide}>
-          <div>
+          <div className={styles.sliderLeftText}>
+            <h1
+              className={styles.sliderTitle}
+              dangerouslySetInnerHTML={{ __html: t('home.new.title') }}
+            />
+            <p
+              className={styles.sliderDescription}
+              dangerouslySetInnerHTML={{ __html: t('home.new.text') }}
+            />
+
+            <div className={styles.toShopWrap}>
+              <Arrow
+                color={'#6e9c9f'}
+                styles={{
+                  transform: 'rotate(90deg)',
+                }}
+              />
+              <Link
+                to={'/shop'}
+                className={styles.openShopBtn}
+                dangerouslySetInnerHTML={{ __html: t('home.new.btn') }}
+              />
+            </div>
+          </div>
+          <div className={styles.images}>
+            <img src={slideImg1} alt="girl" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className={styles.slide}>
+          <div className={styles.sliderLeftText}>
             <h1
               className={styles.sliderTitle}
               dangerouslySetInnerHTML={{ __html: t('home.new.title') }}

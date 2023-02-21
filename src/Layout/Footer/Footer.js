@@ -15,17 +15,18 @@ const Footer = () => {
             <Logo />
             <ul className={styles.copyrights}>
               <li>
-                <a className={styles.copyrightsLink} href="#">
+                <a className={styles.copyrightsLink} href="google.com">
                   © Все права защищены
                 </a>
+                n
               </li>
               <li>
-                <a className={styles.copyrightsLink} href="#">
+                <a className={styles.copyrightsLink} href="google.com">
                   Политика конфиденциальности
                 </a>
               </li>
               <li>
-                <a className={styles.copyrightsLink} href="#">
+                <a className={styles.copyrightsLink} href="google.com">
                   Публичная оферта
                 </a>
               </li>
@@ -39,22 +40,22 @@ const Footer = () => {
               <NavLink to="/shop">Магазин</NavLink>
               <ul className={styles.shopList}>
                 <li>
-                  <a className={styles.shopListLink} href="#">
+                  <a className={styles.shopListLink} href="google.com">
                     Пальто
                   </a>
                 </li>
                 <li>
-                  <a className={styles.shopListLink} href="#">
+                  <a className={styles.shopListLink} href="google.com">
                     Свитшоты
                   </a>
                 </li>
                 <li>
-                  <a className={styles.shopListLink} href="#">
+                  <a className={styles.shopListLink} href="google.com">
                     Кардиганы
                   </a>
                 </li>
                 <li>
-                  <a className={styles.shopListLink} href="#">
+                  <a className={styles.shopListLink} href="google.com">
                     Толстовки
                   </a>
                 </li>
@@ -79,17 +80,17 @@ const Footer = () => {
             </a>
             <ul className={styles.socials}>
               <li>
-                <a target="_blank" href="#">
+                <a target="_blank" href="google.com">
                   <Instagram />
                 </a>
               </li>
               <li>
-                <a target="_blank" href="#">
+                <a target="_blank" href="google.com">
                   <Facebook />
                 </a>
               </li>
               <li>
-                <a target="_blank" href="#">
+                <a target="_blank" href="google.com">
                   <Twitter />
                 </a>
               </li>

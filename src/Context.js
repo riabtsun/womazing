@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -50,6 +50,10 @@ export const Context = props => {
     });
   };
 
+  const [page, setPage] = useState(1);
+
+  const [status, setStatus] = useState('all');
+
   const value = {
     user,
     setUser,
@@ -57,6 +61,10 @@ export const Context = props => {
     logOutUser,
     loginUser,
     collection,
+    page,
+    setPage,
+    status,
+    setStatus,
   };
 
   return (

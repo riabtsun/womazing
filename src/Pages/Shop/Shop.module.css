@@ -1,0 +1,70 @@
+.shopList {
+  padding: 194px 0 0px;
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.shopListItem {
+  display: flex;
+  padding: 19px 65px;
+  border: 1px solid #000;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000;
+  margin: 0 0 92px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.shopListItem:hover, .shopListItem_active {
+  color: #fff;
+  background: #000;
+}
+
+.shopRow {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 30px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 65px;
+}
+
+.productsValues {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #808080;
+}
+
+.sorting {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sortingBtn {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #6e9c9f;
+  margin: 10px;
+  background: none;
+  color: #487b7d;
+  cursor: pointer;
+}
+.sortingBtn:last-child {
+  margin-right: 0;
+}
+
+.sortingBtnActive {
+  background: #dff6fa;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=Shop.module.css.map */
